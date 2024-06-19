@@ -1,0 +1,213 @@
+{
+  "efxFileVersion": "1.5.0",
+  "company": "Holger Wurtz",
+  "effectName": "MicroDexed",
+  "effectVersion": "0.0.1",
+  "coreVersion": "1.5.0",
+  "effectShortName": "DEX",
+  "effectCategory": "Unspecified",
+  "effectDescription": "Yamaha DX7",
+  "numInputs": 1,
+  "numOutputs": 1,
+  "numControls": 9,
+  "effectFilename": "HolgerWurtz_MicroDexed.efx",
+  "libraryName": "HolgerWurtz_MicroDexed",
+  "cppClass": "HolgerWurtz_MicroDexed::MicroDexed",
+  "cppInstBase": "_HolgerWurtz_MicroDexed",
+  "constructorParams": "",
+  "isSingleton": false,
+  "processMidi": true,
+  "audioStreamType": 1,
+  "type": 1,
+  "controls": [
+    {
+      "name": "Bypass",
+      "shortName": "BYP",
+      "description": "Bypasses the effect when enabled",
+      "config": [
+        0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "userData": 1
+    },
+    {
+      "name": "Volume",
+      "shortName": "VOL",
+      "description": "Sets the effect output volume from -40dB to +10dB",
+      "config": [
+        3,
+        0.0,
+        10.0,
+        8.0,
+        0.1000000014901161
+      ],
+      "userData": 0
+    },
+    {
+      "name": "Transpose",
+      "shortName": "TRANS",
+      "description": "Shift the note pitch",
+      "config": [
+        2,
+        0.0,
+        35.0,
+        0.0,
+        1.0
+      ],
+      "userData": 0
+    },
+    {
+      "name": "Category",
+      "shortName": "CAT",
+      "description": "Select the instrument category.",
+      "config": [
+        2,
+        0.0,
+        9.0,
+        0.0,
+        1.0
+      ],
+      "enums": [
+        "Piano",
+        "Organ",
+        "Str.Bow",
+        "Str.Pluck",
+        "Synth",
+        "Brass",
+        "Winds",
+        "Bass",
+        "Bells",
+        "Percuss"
+      ],
+      "userData": 0
+    },
+    {
+      "name": "Piano",
+      "shortName": "PIANO",
+      "description": "Selects from different piano voices.",
+      "config": [
+        2,
+        0.0,
+        20.0,
+        0.0,
+        1.0
+      ],
+      "userData": 0
+    },
+    {
+      "name": "Organ",
+      "shortName": "ORGAN",
+      "description": "Selects from different organ voices.",
+      "config": [
+        2,
+        0.0,
+        9.0,
+        0.0,
+        1.0
+      ],
+      "userData": 0
+    },
+    {
+      "name": "Compressor Enable",
+      "shortName": "COMP",
+      "description": "Controls the output ADSR copressor.",
+      "config": [
+        0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "userData": 0
+    },
+    {
+      "name": "Compressor Pregain",
+      "shortName": "C-GAIN",
+      "description": "Sets the compressor pregain in dB.",
+      "config": [
+        3,
+        0.0,
+        12.0,
+        0.0,
+        0.1000000014901161
+      ],
+      "userData": 0
+    },
+    {
+      "name": "Compressor Attack",
+      "shortName": "C-ATTK",
+      "description": "Sets the attack time in milliseconds for the compressor",
+      "config": [
+        3,
+        0.0,
+        500.0,
+        0.0,
+        1.0
+      ],
+      "userData": 0
+    }
+  ],
+  "projectFileVersion": "1.0.0",
+  "companyLogo": "gfx/company.png",
+  "pedalIcon": "gfx/pedal.png",
+  "publicHeaderFiles": [
+    "inc/MicroDexed.h"
+  ],
+  "privateSourceFiles": [
+    "src/MicroDexedBase.cpp",
+    "src/MicroDexed.cpp",
+    "src/aligned_buf.h",
+    "src/compressor.h",
+    "src/controllers.h",
+    "src/dexed.cpp",
+    "src/dexed.h",
+    "src/dx7note.cpp",
+    "src/dx7note.h",
+    "src/EngineMkI.cpp",
+    "src/EngineMkI.h",
+    "src/EngineMsfa.cpp",
+    "src/EngineMsfa.h",
+    "src/EngineOpl.cpp",
+    "src/EngineOpl.h",
+    "src/env.cpp",
+    "src/env.h",
+    "src/exp2.cpp",
+    "src/exp2.h",
+    "src/fm_core.cpp",
+    "src/fm_core.h",
+    "src/fm_op_kernel.cpp",
+    "src/fm_op_kernel.h",
+    "src/freqlut.cpp",
+    "src/freqlut.h",
+    "src/lfo.cpp",
+    "src/lfo.h",
+    "src/pitchenv.cpp",
+    "src/pitchenv.h",
+    "src/PluginFx.cpp",
+    "src/PluginFx.h",
+    "src/porta.cpp",
+    "src/porta.h",
+    "src/sin.cpp",
+    "src/sin.h",
+    "src/synth.h",
+    "src/ArduinoCompat.h",
+    "src/voices.h",
+    "src/banks.h",
+    "src/preset_piano.h",
+    "src/preset_organ.h"
+  ],
+  "modules": null,
+  "settings": {
+    "showModules": false,
+    "isSingleton": false,
+    "processMidi": true,
+    "cppDefines": "",
+    "noWarnings": "",
+    "enableFastMath": true,
+    "enableO3": true,
+    "audioStreamType": 1
+  }
+}
