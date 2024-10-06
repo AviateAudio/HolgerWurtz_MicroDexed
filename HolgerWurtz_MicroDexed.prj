@@ -1,24 +1,28 @@
 {
-  "efxFileVersion": "1.5.0",
+  "efxFileVersion": "1.6.0",
   "company": "Holger Wurtz",
   "effectName": "MicroDexed",
-  "effectVersion": "0.0.1",
-  "coreVersion": "1.5.0",
+  "effectVersion": "0.0.2",
+  "coreVersion": "1.6.0",
   "effectShortName": "DEX",
-  "effectCategory": "Unspecified",
-  "effectDescription": "Yamaha DX7",
-  "numInputs": 1,
+  "effectCategory": "Synth",
+  "effectDescription": "FM synthesis inspired by DX7 and similar synths.",
+  "numInputs": 0,
   "numOutputs": 1,
-  "numControls": 9,
-  "effectFilename": "HolgerWurtz_MicroDexed.efx",
+  "numControls": 11,
+  "effectFilename": "HolgerWurtz_MicroDexed_v0.0.2.efx",
   "libraryName": "HolgerWurtz_MicroDexed",
   "cppClass": "HolgerWurtz_MicroDexed::MicroDexed",
   "cppInstBase": "_HolgerWurtz_MicroDexed",
   "constructorParams": "",
   "isSingleton": false,
   "processMidi": true,
+  "isDataPak": false,
   "audioStreamType": 1,
-  "type": 1,
+  "cpuUsage": "1",
+  "ram0Usage": "5.4",
+  "ram1Usage": "0.8",
+  "writableBuffers": 1,
   "controls": [
     {
       "name": "Bypass",
@@ -41,9 +45,17 @@
         3,
         0.0,
         10.0,
-        8.0,
+        6.5,
         0.1000000014901161
       ],
+      "iconPot": "gfx/BlackKnobFull.png",
+      "iconPotHeight": 192,
+      "position": [
+        152,
+        164
+      ],
+      "scalingRatio": 1.0,
+      "supressValueLabel": 1,
       "userData": 0
     },
     {
@@ -57,6 +69,14 @@
         0.0,
         1.0
       ],
+      "iconEncoder": "gfx/BlackKnobFull.png",
+      "iconEncoderHeight": 192,
+      "position": [
+        343,
+        164
+      ],
+      "scalingRatio": 1.0,
+      "supressValueLabel": 1,
       "userData": 0
     },
     {
@@ -66,15 +86,17 @@
       "config": [
         2,
         0.0,
-        9.0,
+        3.0,
         0.0,
         1.0
       ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
       "enums": [
         "Piano",
         "Organ",
-        "Str.Bow",
-        "Str.Pluck",
+        "Strings",
+        "Extra",
         "Synth",
         "Brass",
         "Winds",
@@ -82,6 +104,11 @@
         "Bells",
         "Percuss"
       ],
+      "position": [
+        534,
+        164
+      ],
+      "scalingRatio": 1.0,
       "userData": 0
     },
     {
@@ -91,10 +118,39 @@
       "config": [
         2,
         0.0,
-        20.0,
+        18.0,
         0.0,
         1.0
       ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "FM Rhodes",
+        "FM Rhodes2",
+        "Steinway",
+        "Piano 2",
+        "Rhodes1 RH",
+        "Rhodes 2",
+        "Piano 1",
+        "Piano 2",
+        "Piano 3",
+        "E.Piano 1",
+        "Piano 4",
+        "Piano 5",
+        "E.Piano 2",
+        "E.Piano 3",
+        "E. Piano 4",
+        "Piano 5ths",
+        "Toy Piano",
+        "E.Piano 1",
+        "Piano 1",
+        ""
+      ],
+      "position": [
+        726,
+        164
+      ],
+      "scalingRatio": 1.0,
       "userData": 0
     },
     {
@@ -104,10 +160,121 @@
       "config": [
         2,
         0.0,
-        9.0,
+        12.0,
         0.0,
         1.0
       ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "Orgel 1",
+        "B3 Organ",
+        "E.Organ 1",
+        "E.Organ 2",
+        "E.Organ 3",
+        "E.Organ 4",
+        "E.Organ5",
+        "SynOrgan 1",
+        "SynOrgan2",
+        "Pipes 1",
+        "60-S Organ",
+        "Pipes 2",
+        "Pipes 3"
+      ],
+      "position": [
+        918,
+        164
+      ],
+      "scalingRatio": 1.0,
+      "userData": 0
+    },
+    {
+      "name": "Strings",
+      "shortName": "STRING",
+      "description": "Selects from differeent string voices.",
+      "config": [
+        2,
+        0.0,
+        12.0,
+        0.0,
+        1.0
+      ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "Moog Strng",
+        "ANASTRINGS",
+        "Horn+Str",
+        "St Pad 4C",
+        " St Pad 5C",
+        "Strings M2",
+        "SampleStrg",
+        "Mid.Strg B",
+        " String Syn",
+        "BRS.STRS",
+        "Strings 1",
+        "Strings 2",
+        "Strings 3"
+      ],
+      "position": [
+        1109,
+        164
+      ],
+      "scalingRatio": 1.0,
+      "userData": 0
+    },
+    {
+      "name": "FineTales",
+      "shortName": "TALES",
+      "description": "Select the FineTales voice.",
+      "config": [
+        2,
+        0.0,
+        31.0,
+        0.0,
+        1.0
+      ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "Airblower",
+        "Sukiyaka",
+        "HarvestFLT",
+        "Low Strgs",
+        "High Strgs",
+        "SloSwell",
+        "Clouds Pad",
+        "Ice Pad",
+        "Cascade",
+        "Sensitar",
+        "Curved Air",
+        "Soft Pond",
+        "Hi Lyz",
+        "AnaAtkStr",
+        "Jarre Pad",
+        "Ondes Pad",
+        "Vollenweid",
+        "PPG PadFX",
+        "Ana Pad",
+        "Thin Atmos",
+        "Soft Space",
+        "Ens Pad",
+        "Warm Pad",
+        "Phaze Pad",
+        "Chip PIzz",
+        "12 String",
+        "Muted Gtr",
+        "PIpeOrgan1",
+        "PipeOrgan2",
+        "Hrpsichord",
+        "Rigel EPB",
+        "BakketDrum"
+      ],
+      "position": [
+        1300,
+        164
+      ],
+      "scalingRatio": 1.0,
       "userData": 0
     },
     {
@@ -151,8 +318,10 @@
     }
   ],
   "projectFileVersion": "1.0.0",
+  "buildType": "1",
   "companyLogo": "gfx/company.png",
-  "pedalIcon": "gfx/pedal.png",
+  "pedalIcon": "gfx/MicroDexedIcon.png",
+  "basePedal": "gfx/MicroDexedBase.png",
   "publicHeaderFiles": [
     "inc/MicroDexed.h"
   ],
@@ -197,13 +366,16 @@
     "src/voices.h",
     "src/banks.h",
     "src/preset_piano.h",
-    "src/preset_organ.h"
+    "src/preset_organ.h",
+    "src/preset_strings.h",
+    "src/preset_finetales.h"
   ],
   "modules": null,
   "settings": {
     "showModules": false,
     "isSingleton": false,
     "processMidi": true,
+    "isDataPak": false,
     "cppDefines": "",
     "noWarnings": "",
     "enableFastMath": true,

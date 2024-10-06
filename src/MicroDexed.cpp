@@ -13,6 +13,8 @@
 #include "banks.h"
 #include "preset_piano.h"
 #include "preset_organ.h"
+#include "preset_strings.h"
+#include "preset_finetales.h"
 
 using namespace Aviate;
 
@@ -68,30 +70,40 @@ void MicroDexed::m_init()
     m_categorySel = InstrumentCategory::PIANO;
     m_pianoSel = 0;
     m_organSel = 0;
+    m_stringsSel = 0;
+    m_finetalesSel = 0;
     m_updateVoice();
     m_isInit = true;
 }
 
 void MicroDexed::update(void)
 {
+    efxLogger.printf("MicroDexed::update() entered\n"); efxLogger.flush();
+    if (!m_enable ) { return; }
     if (!m_isInit) { m_init(); }
-    audio_block_float32_t *inputAudioBlock = receiveWritableFloat(); // get the next block of input samples
-    inputAudioBlock = m_basicInputCheck(inputAudioBlock, 0); // check for disable mode, bypass, or invalid inputs. Transmit to channel 0 in bypass
-    if (!inputAudioBlock) { in_update = false; return; } // no further processing for this update() call
+    
+    //audio_block_float32_t *inputAudioBlock = receiveWritableFloat(); // get the next block of input samples
+    //inputAudioBlock = m_basicInputCheck(inputAudioBlock, 0); // check for disable mode, bypass, or invalid inputs. Transmit to channel 0 in bypass
+    //if (!inputAudioBlock) { in_update = false; return; } // no further processing for this update() call
 
     audio_block_float32_t* output = allocateFloat();
-    if (!output) { release(inputAudioBlock); in_update = false; return; }
+    if (!output) { return; }
+    memset(&output->data[0], 0, AUDIO_SAMPLES_PER_BLOCK* sizeof(AudioDataType));
+    if (m_bypass) { transmit(output, 0); release(output); }
+    m_updateInputPeak(output);
+    //if (!output) { release(inputAudioBlock); in_update = false; return; }
+
 
     // You must call m_updateInputPeak() before processing the audio
-    m_updateInputPeak(inputAudioBlock);
+    //m_updateInputPeak(inputAudioBlock);
 
-    if (in_update == true)
-    {
-        m_dexed->xrun++;
-        return;
-    }
-    else
-       in_update = true;
+    // if (in_update == true)
+    // {
+    //     m_dexed->xrun++;
+    //     return;
+    // }
+    // else
+    //    in_update = true;
 
     SysPlatform::ElapsedMicros render_time;
 
@@ -115,9 +127,9 @@ void MicroDexed::update(void)
     m_updateOutputPeak(output); // you must call m_upateOutputPeak() at the end of update() before transmit
     transmit(output);
     release(output);
-    release(inputAudioBlock);
+    //release(inputAudioBlock);
 
-    in_update = false;
+    //in_update = false;
 }
 
 void MicroDexed::volume(float value)
@@ -226,6 +238,12 @@ void MicroDexed::m_updateVoice()
     case InstrumentCategory::ORGAN :
         efxLogger.printf("MicroDexed::m_updateVoice(): ORGAN set to voice %u, transpose %u\n", m_organSel, m_transposeSel);
         m_dexed->decodeVoice(decoded_voice, organ_bank[m_organSel]);break;
+    case InstrumentCategory::STRINGS :
+        efxLogger.printf("MicroDexed::m_updateVoice(): STRINGS set to voice %u, transpose %u\n", m_stringsSel, m_transposeSel);
+        m_dexed->decodeVoice(decoded_voice, strings_bank[m_stringsSel]);break;
+    case InstrumentCategory::FINETALES :
+        efxLogger.printf("MicroDexed::m_updateVoice(): FINETALES set to voice %u, transpose %u\n", m_finetalesSel, m_transposeSel);
+        m_dexed->decodeVoice(decoded_voice, finetales3_bank[m_finetalesSel]);break;
     // case InstrumentCategory::STR_BOW : break;
     // case InstrumentCategory::STR_PLUCK : break;
     // case InstrumentCategory::BRASS : break;
@@ -263,8 +281,26 @@ void MicroDexed::organ(float value)
     m_organSel = static_cast<unsigned>(m_organ);
     efxLogger.printf("MicroDexed::organ select: %u\n", m_organSel);
     if (m_organSel < 0) { m_organSel = 0; }
-    if (m_organSel >= NUM_PIANO_VOICES) { m_organSel = NUM_PIANO_VOICES-1; }
+    if (m_organSel >= NUM_ORGAN_VOICES) { m_organSel = NUM_ORGAN_VOICES-1; }
     if (m_categorySel == InstrumentCategory::ORGAN) { m_updateVoice(); }
+}
+void MicroDexed::strings(float value)
+{
+    m_stringsSel = getUserParamValue(Strings_e, value);
+    m_stringsSel = static_cast<unsigned>(m_stringsSel);
+    efxLogger.printf("MicroDexed::strings select: %u\n", m_stringsSel);
+    if (m_stringsSel < 0) { m_stringsSel = 0; }
+    if (m_stringsSel >= NUM_STRINGS_VOICES) { m_stringsSel = NUM_STRINGS_VOICES-1; }
+    if (m_categorySel == InstrumentCategory::STRINGS) { m_updateVoice(); }
+}
+void MicroDexed::finetales(float value)
+{
+    m_finetalesSel = getUserParamValue(FineTales_e, value);
+    m_finetalesSel = static_cast<unsigned>(m_finetalesSel);
+    efxLogger.printf("MicroDexed::finetales select: %u\n", m_finetalesSel);
+    if (m_finetalesSel < 0) { m_finetalesSel = 0; }
+    if (m_finetalesSel >= NUM_FINETALES_VOICES) { m_finetalesSel = NUM_FINETALES_VOICES-1; }
+    if (m_categorySel == InstrumentCategory::FINETALES) { m_updateVoice(); }
 }
 
 ///////////////

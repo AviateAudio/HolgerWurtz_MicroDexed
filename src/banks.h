@@ -8,7 +8,13 @@
 #define NUM_VALUES_PER_VOICE 128
 #define MAX_NUM_TRANSPOSE 36
 
-#if 1
+#if 0
+constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VOICE] PROGMEM =
+{
+};
+#endif
+
+#if 0
 constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VOICE] PROGMEM =
 {
 	{	// RitCh1.syx
@@ -1167,7 +1173,7 @@ constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VO
 			 65,  90,  67,  72,  82,  68,  49,  32
 		}
 	},
-	{	// rom1a.syx
+	{	// rom1a.syx (Master EU/JP)
 		{	// 1: BRASS   1
 			 49,  99,  28,  68,  98,  98,  91,   0,
 			 39,  54,  50,   5,  60,   8,  82,   2,
@@ -1745,7 +1751,7 @@ constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VO
 			 75,  69,  32,  79,  70,  70,  32,  32
 		}
 	},
-	{	// rom1b.syx
+	{	// rom1b.syx (Keyboard & Plucked)
 		{	// 1: PIANO   4
 			 92,  71,  58,  36,  99,   0,   0,   0,
 			 36,   0,  98,   0,  67,   4,  78,   0,
@@ -2323,7 +2329,7 @@ constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VO
 			 83,  83,  32,  32,  32,  32,  52,  32
 		}
 	},
-	{	// rom2a.syx
+	{	// rom2a.syx (Orchestral & Percussive)
 		{	// 1: PICCOLO
 			 99,  78,  75,  98,  80,  64,  64,   0,
 			 39,   0,   0,   0,  56,  28,  44,  10,
@@ -2901,7 +2907,7 @@ constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VO
 			 71,  32,  68,  82,  85,  77,  32,  32
 		}
 	},
-	{	// rom2b.syx
+	{	// rom2b.syx (Synth & Complex Effects)
 		{	// 1: SYN-LEAD 2
 			 99,  42,  23,  71,  99,  56,  56,   0,
 			 27,   0,  45,   7,  56,   0,  76,   4,
@@ -3479,7 +3485,7 @@ constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VO
 			 80,  76,  79,  83,  73,  79,  78,  32
 		}
 	},
-	{	// rom3a.syx
+	{	// rom3a.syx (Master US)
 		{	// 1: FLUTE   1
 			 99,  64,  98,  61,  99,  67,  52,   0,
 			 46,   0,   0,  12,  64,   4,  84,   2,
@@ -4057,7 +4063,7 @@ constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VO
 			 75,  69,  32,  79,  70,  70,  32,  32
 		}
 	},
-	{	// rom3b.syx
+	{	// rom3b.syx (Keyboard & Plucked)
 		{	// 1: PIANO   2
 			 95,  28,  27,  47,  99,  90,   0,   0,
 			  5,   0,   0,   4,  58,   0,  59,   2,
@@ -4635,7 +4641,7 @@ constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VO
 			 85,  67,  75,  32,  66,  65,  83,  83
 		}
 	},
-	{	// rom4a.syx
+	{	// rom4a.syx (Orchestral & Percusive)
 		{	// 1: PICCOLO
 			 99,  78,  75,  98,  80,  64,  64,   0,
 			 39,   0,   0,   0,  56,  28,  44,  10,
@@ -5213,7 +5219,7 @@ constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VO
 			 66,  69,  32,  32,  32,  32,  32,  32
 		}
 	},
-	{	// rom4b.syx
+	{	// rom4b.syx (Synth & Complex Effects)
 		{	// 1: CLAV-E.PNO
 			 85,  38,  75,  61,  88,  44,  25,   0,
 			  0,   0,   0,   0,  38,  28,  98,  28,
