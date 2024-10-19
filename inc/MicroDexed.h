@@ -12,6 +12,7 @@
 #include "Aviate/AudioEffectWrapper.h"
 
 //!s - START_USER_INCLUDES - put your #includes below this line before the matching END
+#include <array>
 class Dexed;  // forward declare
 //!e - END_USER_INCLUDES
 
@@ -22,13 +23,13 @@ enum class InstrumentCategory : unsigned {
     PIANO,
     ORGAN,
     STRINGS,
-    FINETALES,
     SYNTH,
     BRASS,
     WINDS,
     BASS,
     BELLS,
-    PERCUSS
+    PERCUSS,
+    FINETALES
 };
 //!e - END_USER_EFFECT_TYPES
 
@@ -50,10 +51,15 @@ public:
         Piano_e = 4,
         Organ_e = 5,
         Strings_e = 6,
-        FineTales_e = 7,
-        CompressorEnable_e = 8,
-        CompressorPregain_e = 9,
-        CompressorAttack_e = 10,
+        Synth_e = 7,
+        Brass_e = 8,
+        Winds_e = 9,
+        Bass_e = 10,
+        Bells_e = 11,
+        Percussion_e = 12,
+        FineTales_e = 13,
+        BankSelect_e = 14,
+        VoiceSelect_e = 15,
         NUM_CONTROLS
     };
 
@@ -83,10 +89,15 @@ public:
     void piano(float value);
     void organ(float value);
     void strings(float value);
+    void synth(float value);
+    void brass(float value);
+    void winds(float value);
+    void bass(float value);
+    void bells(float value);
+    void percussion(float value);
     void finetales(float value);
-    void compressorenable(float value);
-    void compressorpregain(float value);
-    void compressorattack(float value);
+    void bankselect(float value);
+    void voiceselect(float value);
 
     //!s - START_USER_PUBLIC_MEMBERS - put your public members below this line before the matching END
     //!e - END_USER_PUBLIC_MEMBERS
@@ -101,31 +112,59 @@ private:
     float m_piano = 0.0f;
     float m_organ = 0.0f;
     float m_strings = 0.0f;
+    float m_synth = 0.0f;
+    float m_brass = 0.0f;
+    float m_winds = 0.0f;
+    float m_bass = 0.0f;
+    float m_bells = 0.0f;
+    float m_percussion = 0.0f;
     float m_finetales = 0.0f;
-    float m_compressorenable = 0.0f;
-    float m_compressorpregain = 0.0f;
-    float m_compressorattack = 0.0f;
+    float m_bankselect = 0.0f;
+    float m_voiceselect = 0.0f;
 
     bool m_enableAndBypassCheck(unsigned numOutputs);  // returns false if disabled or bypassed
 
     //!s - START_USER_PRIVATE_MEMBERS - put your private members below this line before the matching END
+    float AUDIO_SAMPLES_PER_BLOCK_INV;
     Dexed* m_dexed;
     const uint16_t audio_block_time_us = 1000000 / (AUDIO_SAMPLE_RATE_EXACT / AUDIO_BLOCK_SAMPLES);
     volatile bool in_update = false;
 
     void m_init();
     bool m_isInit = false;
-    //void m_setVoice(unsigned bank, unsigned voice, unsigned tranpose);
-    //unsigned bankSel = 0;
-    //unsigned voiceSel = 0;
+    void m_setVoice(unsigned bank, unsigned voice, unsigned tranpose);
+    unsigned bankSel = 0;
+    unsigned voiceSel = 0;
     unsigned m_transposeSel = 0;
 
+    void m_updateVoiceRequest();
     void m_updateVoice();
+    void m_setInstrument(InstrumentCategory category, unsigned instEnum, float& var, float value, unsigned& sel, 
+                         unsigned numVoices, const char* name);
     InstrumentCategory m_categorySel = InstrumentCategory::PIANO;
-    unsigned m_pianoSel = 0;
-    unsigned m_organSel = 0;
-    unsigned m_stringsSel = 0;
+    unsigned m_pianoSel     = 0;
+    unsigned m_organSel     = 0;
+    unsigned m_stringsSel   = 0;
+    unsigned m_synthSel     = 0;
+    unsigned m_brassSel     = 0;
+    unsigned m_windsSel     = 0;
+    unsigned m_bassSel      = 0;
+    unsigned m_bellsSel     = 0;
+    unsigned m_percussSel   = 0;
     unsigned m_finetalesSel = 0;
+
+    static constexpr unsigned MAX_NOTES = 16;
+    enum class VoiceUpdate : unsigned { IDLE, MUTING, ATTACKING };
+    VoiceUpdate m_voiceUpdate;
+    struct notes_t {
+        bool    playing = false;
+        uint8_t note;
+        uint8_t velocity;
+    };
+    std::array<notes_t, MAX_NOTES> m_noteArray;
+    void m_addNote(uint8_t note, uint8_t velocity);
+    void m_removeNote(uint8_t note, uint8_t velocity);
+
     //!e - END_USER_PRIVATE_MEMBERS
 
 };

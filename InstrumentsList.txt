@@ -1,0 +1,390 @@
+Bank 0
+v:0 -> FM-Rhodes 
+v:1 -> FM-Rhodes2
+v:2 -> Meinecke  
+v:3 -> CCCP-70   
+v:4 -> Steinway  
+v:5 -> Korg CX3  (Synth)
+v:6 -> Leadharp  (Synth, Strings)
+v:7 -> Synclavier (Synth)
+v:8 -> ELEC VANG 
+v:9 -> FATSO. RT. (Synth)
+v:10 -> FATSYNTH A
+v:11 -> JUPITER 1 
+v:12 -> JUPITER 8 (Synth)
+v:13 -> Jupiter   
+v:14 -> ANALOG 2  
+v:15 -> JUNO 106 6 (Synth, maybe)
+v:16 -> ALG.2. RT.
+v:17 -> Mooger Low (Percussive synth)
+v:18 -> Soft-Moog 
+v:19 -> Mooger    
+v:20 -> Mini-Moog (Synth)
+v:21 -> Mini-Moog2
+v:22 -> Moog Strng
+v:23 -> ANASTRINGS
+v:24 -> ANALOG  1 
+v:25 -> ANALOG    
+v:26 -> Horn+Str. 
+v:27 -> St Pad  4c (Synth)
+v:28 -> St Pad  5c
+v:29 -> STRINGS M2
+v:30 -> SAMPLESTRG
+v:31 -> MID.STRG B
+FM-Rhodes ,
+FM-Rhodes2,Meinecke  ,CCCP-70   ,Steinway  ,Korg CX3  ,Leadharp  ,Synclavier,ELEC VANG ,
+FATSO. RT.,FATSYNTH A,JUPITER 1 ,JUPITER 8 ,Jupiter   ,ANALOG 2  ,JUNO 106 6,ALG.2. RT.,
+Mooger Low,Soft-Moog ,Mooger    ,Mini-Moog ,Mini-Moog2,Moog Strng,ANASTRINGS,ANALOG  1 ,
+ANALOG    ,Horn+Str. ,St Pad  4c,St Pad  5c,STRINGS M2,SAMPLESTRG,MID.STRG B,
+
+Bank 1
+v:0 -> HORNS 5A W (Synth)
+v:1 -> 80 F      (Synth)
+v:2 -> 8RASS   3 (Brass)
+v:3 -> JUMP      
+v:4 -> JUMP 2SENS
+v:5 -> FLUTE   1 (WIND)
+v:6 -> CORNET HS 
+v:7 -> CP 9O     
+v:8 -> B-R-ASS 1 (Brass)
+v:9 -> BASS    1 (Bass)
+v:10 -> SCHMIDT 2 
+v:11 -> FUNK-RHYT. (Synth)
+v:12 -> KLA5 HS   (Synth)
+v:13 -> D 5-6..... (Plucked)
+v:14 -> CLIC HS   (Organ)
+v:15 -> JUMP 3    
+v:16 -> ORGEL 1   (organ)
+v:17 -> B 3 ORGAN 
+v:18 -> PIANO   2 
+v:19 -> BREAK FREE
+v:20 -> BASCHMIDT (Bass)
+v:21 -> RHODES1 RH
+v:22 ->  RHODES 2 
+v:23 -> HOHNER D 6
+v:24 -> SYNTH R.T. (Synth)
+v:25 -> STRING SYN
+v:26 -> FANFARE H1
+v:27 -> JUNK      (Strings)
+v:28 -> --OBERHEIM (Strings)
+v:29 -> CHOIR.    (Choir/Vocal)
+v:30 -> BRS.STRS. (Brass)
+v:31 -> LAAZCHRD1 (Synth)
+HORNS 5A W,
+80 F      ,8RASS   3 ,JUMP      ,JUMP 2SENS,FLUTE   1 ,CORNET HS ,CP 9O     ,B-R-ASS 1 ,
+BASS    1 ,SCHMIDT 2 ,FUNK-RHYT.,KLA5 HS   ,D 5-6.....,CLIC HS   ,JUMP 3    ,ORGEL 1   ,
+B 3 ORGAN ,PIANO   2 ,BREAK FREE,BASCHMIDT ,RHODES1 RH, RHODES 2 ,HOHNER D 6,SYNTH R.T.,
+STRING SYN,FANFARE H1,JUNK      ,--OBERHEIM,CHOIR.    ,BRS.STRS. ,LAAZCHRD1 ,
+
+Bank 2
+v:0 -> BRASS   1 
+v:1 -> BRASS   2 (Synth)
+v:2 -> BRASS   3 
+v:3 -> STRINGS 1 
+v:4 -> STRINGS 2 
+v:5 -> STRINGS 3 
+v:6 -> ORCHESTRA (Synth)
+v:7 -> PIANO   1 
+v:8 -> PIANO   2 
+v:9 -> PIANO   3 
+v:10 -> E.PIANO 1 
+v:11 -> GUITAR  1 (Plucked)
+v:12 -> GUITAR  2 
+v:13 -> SYN-LEAD 1 (Synth)
+v:14 -> BASS    1 (repeat)
+v:15 -> BASS    2 (Bass)
+v:16 -> E.ORGAN 1 
+v:17 -> PIPES   1 (Wind)
+v:18 -> HARPSICH 1
+v:19 -> CLAV    1 
+v:20 -> VIBE    1 (Bells)
+v:21 -> MARIMBA   (Percussion)
+v:22 -> KOTO      (Synth)
+v:23 -> FLUTE   1 
+v:24 -> ORCH-CHIME
+v:25 -> TUB BELLS (Bells)
+v:26 -> STEEL DRUM (Percussion)
+v:27 -> TIMPANI   (Percussion)
+v:28 -> REFS WHISL
+v:29 -> VOICE   1 (Choir/Vocal)
+v:30 -> TRAIN     
+v:31 -> TAKE OFF  
+BRASS   1 ,
+BRASS   2 ,BRASS   3 ,STRINGS 1 ,STRINGS 2 ,STRINGS 3 ,ORCHESTRA ,PIANO   1 ,PIANO   2 ,
+PIANO   3 ,E.PIANO 1 ,GUITAR  1 ,GUITAR  2 ,SYN-LEAD 1,BASS    1 ,BASS    2 ,E.ORGAN 1 ,
+PIPES   1 ,HARPSICH 1,CLAV    1 ,VIBE    1 ,MARIMBA   ,KOTO      ,FLUTE   1 ,ORCH-CHIME,
+TUB BELLS ,STEEL DRUM,TIMPANI   ,REFS WHISL,VOICE   1 ,TRAIN     ,TAKE OFF  ,
+
+Bank 3
+v:0 -> PIANO   4 
+v:1 -> PIANO   5 
+v:2 -> E.PIANO 2 
+v:3 -> E.PIANO 3 
+v:4 -> E.PIANO 4 
+v:5 -> PIANO 5THS
+v:6 -> CELESTE   (Bells)
+v:7 -> TOY PIANO 
+v:8 -> HARPSICH 2
+v:9 -> HARPSICH 3
+v:10 -> CLAV    2 
+v:11 -> CLAV    3 (Synth)
+v:12 -> E.ORGAN 2 
+v:13 -> E.ORGAN 3 
+v:14 -> E.ORGAN 4 
+v:15 -> E.ORGAN 5 
+v:16 -> PIPES   2 
+v:17 -> PIPES   3 (Pipes)
+v:18 -> PIPES   4 (Pipes)
+v:19 -> CALIOPE   
+v:20 -> ACCORDION (Synth)
+v:21 -> SITAR     (Synth)
+v:22 -> GUITAR  3 
+v:23 -> GUITAR  4 
+v:24 -> GUITAR  5 
+v:25 -> GUITAR  6 
+v:26 -> LUTE      
+v:27 -> BANJO     
+v:28 -> HARP    1 
+v:29 -> HARP    2 (Synth)
+v:30 -> BASS    3 
+v:31 -> BASS    4 (Bass)
+PIANO   4 ,
+PIANO   5 ,E.PIANO 2 ,E.PIANO 3 ,E.PIANO 4 ,PIANO 5THS,CELESTE   ,TOY PIANO ,HARPSICH 2,
+HARPSICH 3,CLAV    2 ,CLAV    3 ,E.ORGAN 2 ,E.ORGAN 3 ,E.ORGAN 4 ,E.ORGAN 5 ,PIPES   2 ,
+PIPES   3 ,PIPES   4 ,CALIOPE   ,ACCORDION ,SITAR     ,GUITAR  3 ,GUITAR  4 ,GUITAR  5 ,
+GUITAR  6 ,LUTE      ,BANJO     ,HARP    1 ,HARP    2 ,BASS    3 ,BASS    4 ,
+
+Bank 4
+v:0 -> PICCOLO   
+v:1 -> FLUTE   2 
+v:2 -> OBOE      (Winds)
+v:3 -> CLARINET  (winds)
+v:4 -> SAX BC      
+v:5 -> BASSOON   
+v:6 -> STRINGS 4 
+v:7 -> STRINGS 5 
+v:8 -> STRINGS 6 
+v:9 -> STRINGS 7 
+v:10 -> STRINGS 8 
+v:11 -> BRASS   4 
+v:12 -> BRASS   5 (Brass)
+v:13 -> BRASS 6 BC
+v:14 -> BRASS   7 (Brass)
+v:15 -> BRASS   8 
+v:16 -> RECORDER  (Winds)
+v:17 -> HARMONICA1
+v:18 -> HRMNCA2 BC
+v:19 -> VOICE   2 (Choir/Vocal)
+v:20 -> VOICE   3 
+v:21 -> GLOKENSPL (Percussive)
+v:22 -> VIBE    2 
+v:23 -> XYLOPHONE (Percussive)
+v:24 -> CHIMES  
+v:25 -> GONG    1 
+v:26 -> GONG    2 (Synth)
+v:27 -> BELLS     (Bells)
+v:28 -> COW BELL  (Percussive)
+v:29 -> BLOCK     (Percussive)
+v:30 -> FLEXATONE 
+v:31 -> LOG DRUM  (Percussive)
+PICCOLO   ,
+FLUTE   2 ,OBOE      ,CLARINET  ,SAX BC    ,BASSOON   ,STRINGS 4 ,STRINGS 5 ,STRINGS 6 ,
+STRINGS 7 ,STRINGS 8 ,BRASS   4 ,BRASS   5 ,BRASS 6 BC,BRASS   7 ,BRASS   8 ,RECORDER  ,
+HARMONICA1,HRMNCA2 BC,VOICE   2 ,VOICE   3 ,GLOKENSPL ,VIBE    2 ,XYLOPHONE ,CHIMES    ,
+GONG    1 ,GONG    2 ,BELLS     ,COW BELL  ,BLOCK     ,FLEXATONE ,LOG DRUM  ,
+
+Bank 5
+v:0 -> SYN-LEAD 2
+v:1 -> SYN-LEAD 3 (Synth)
+v:2 -> SYN-LEAD 4 (Bass)
+v:3 -> SYN-LEAD 5
+v:4 -> SYN-CLAV 1
+v:5 -> SYN-CLAV 2
+v:6 -> SYN-CLAV 3 (CRAZY!)
+v:7 -> SYN-PIANO 
+v:8 -> SYNBRASS 1
+v:9 -> SYNBRASS 2 (Synth)
+v:10 -> SYNORGAN 1
+v:11 -> SYNORGAN 2
+v:12 -> SYN-VOX   (Winds)
+v:13 -> SYN-ORCH  (Winds)
+v:14 -> SYN-BASS 1
+v:15 -> SYN-BASS 2
+v:16 -> HARP-FLUTE
+v:17 -> BELL-FLUTE (Bell)
+v:18 -> E.P-BRS BC
+v:19 -> T.BL-EXPA (Bell, GREAT!)
+v:20 -> CHIME-STRG (Bell)
+v:21 -> B.DRM-SNAR (Percuss)
+v:22 -> SHIMMER   
+v:23 -> EVOLUTION 
+v:24 -> WATER GDN 
+v:25 -> WASP STING
+v:26 -> LASER GUN 
+v:27 -> DESCENT   
+v:28 -> OCTAVE WAR (Synth)
+v:29 -> GRAND PRIX
+v:30 -> ST.HELENS 
+v:31 -> EXPLOSION 
+SYN-LEAD 2,
+SYN-LEAD 3,SYN-LEAD 4,SYN-LEAD 5,SYN-CLAV 1,SYN-CLAV 2,SYN-CLAV 3,SYN-PIANO ,SYNBRASS 1,
+SYNBRASS 2,SYNORGAN 1,SYNORGAN 2,SYN-VOX   ,SYN-ORCH  ,SYN-BASS 1,SYN-BASS 2,HARP-FLUTE,
+BELL-FLUTE,E.P-BRS BC,T.BL-EXPA ,CHIME-STRG,B.DRM-SNAR,SHIMMER   ,EVOLUTION ,WATER GDN ,
+WASP STING,LASER GUN ,DESCENT   ,OCTAVE WAR,GRAND PRIX,ST.HELENS ,EXPLOSION ,
+
+Bank 6
+v:0 -> FLUTE   1 
+v:1 -> HARPSICH 1
+v:2 -> STRG ENS 1 (Strings, great!)
+v:3 -> BRIGHT BOW (Strings, great!)
+v:4 -> BRASSHORNS
+v:5 -> BR TRUMPET
+v:6 -> MARIMBA   (Percuss, repeat)
+v:7 -> E.PIANO 1 
+v:8 -> PIANO   1 
+v:9 -> PIPES   1 (repeat)
+v:10 -> E.ORGAN 1 
+v:11 -> E.BASS  1 
+v:12 -> CLAV    1 
+v:13 -> HARMONICA1
+v:14 -> JAZZ GUIT1
+v:15 -> PRC SYNTH1
+v:16 -> SAX BC    
+v:17 -> FRETLESS 1
+v:18 -> HARP    1 
+v:19 -> TIMPANI   (percuss, repeat)
+v:20 -> HEAVYMETAL
+v:21 -> STEEL DRUM (Pecuss, good)
+v:22 -> SYN-LEAD 1
+v:23 -> VOICES BC 
+v:24 -> CLAV ENS  
+v:25 -> LASERSWEEP
+v:26 -> TUB ERUPT (Bells)
+v:27 -> GRAND PRIX
+v:28 -> REFS WHISL
+v:29 -> TRAIN     (Percuss GOod)
+v:30 -> BRASS S H (Synth)
+v:31 -> TAKE OFF  
+FLUTE   1 ,
+HARPSICH 1,STRG ENS 1,BRIGHT BOW,BRASSHORNS,BR TRUMPET,MARIMBA   ,E.PIANO 1 ,PIANO   1 ,
+PIPES   1 ,E.ORGAN 1 ,E.BASS  1 ,CLAV    1 ,HARMONICA1,JAZZ GUIT1,PRC SYNTH1,SAX BC    ,
+FRETLESS 1,HARP    1 ,TIMPANI   ,HEAVYMETAL,STEEL DRUM,SYN-LEAD 1,VOICES BC ,CLAV ENS  ,
+LASERSWEEP,TUB ERUPT ,GRAND PRIX,REFS WHISL,TRAIN     ,BRASS S H ,TAKE OFF  ,
+
+Bank 7
+v:0 -> PIANO   2 
+v:1 -> E.GRAND 1 
+v:2 -> E.GRAND 2 
+v:3 -> HONKY TONK
+v:4 -> E.PIANO 2 
+v:5 -> E.PIANO 3 
+v:6 -> E.PIANO 4 
+v:7 -> CELESTE   
+v:8 -> FUNK CLAV 
+v:9 -> CLAV ENS 2
+v:10 -> PERC CLAV 
+v:11 -> HARPSICH 2
+v:12 -> E.ORGAN 2 (Organ)
+v:13 -> E.ORGAN 3 
+v:14 -> 60-S ORGAN (Organ)
+v:15 -> PIPES   2 
+v:16 -> PIPES   3 
+v:17 -> CALIOPE   
+v:18 -> ACCORDION 
+v:19 -> TOY PIANO 
+v:20 -> SITAR     
+v:21 -> KOTO      
+v:22 -> JAZZ GUIT2
+v:23 -> SPANISHGTR
+v:24 -> FOLK GUIT 
+v:25 -> LUTE      
+v:26 -> BANJO     
+v:27 -> CLAS.GUIT 
+v:28 -> HARP    2 
+v:29 -> E.BASS  2 (Bass)
+v:30 -> FRETLESS 2
+v:31 -> PLUCK BASS (Bass)
+PIANO   2 ,
+E.GRAND 1 ,E.GRAND 2 ,HONKY TONK,E.PIANO 2 ,E.PIANO 3 ,E.PIANO 4 ,CELESTE   ,FUNK CLAV ,
+CLAV ENS 2,PERC CLAV ,HARPSICH 2,E.ORGAN 2 ,E.ORGAN 3 ,60-S ORGAN,PIPES   2 ,PIPES   3 ,
+CALIOPE   ,ACCORDION ,TOY PIANO ,SITAR     ,KOTO      ,JAZZ GUIT2,SPANISHGTR,FOLK GUIT ,
+LUTE      ,BANJO     ,CLAS.GUIT ,HARP    2 ,E.BASS  2 ,FRETLESS 2,PLUCK BASS,
+
+Bank 8
+v:0 -> PICCOLO   
+v:1 -> FLUTE   2 
+v:2 -> OBOE      
+v:3 -> CLARINET  (Repeat)
+v:4 -> BASSOON   
+v:5 -> PAN FLUTE (Winds)
+v:6 -> LEAD BRASS (Synth)
+v:7 -> HORNS     
+v:8 -> SOLO TBONE
+v:9 -> BRASS BC  
+v:10 -> BRASS 5THS
+v:11 -> SYNTHBRASS (Brass)
+v:12 -> STRG QRT 1
+v:13 -> STRG ENS 2 (Strings, great!)
+v:14 -> VIOLA SECN (Strings, great)
+v:15 -> STRGS LOW (Strings)
+v:16 -> HIGH STRGS
+v:17 -> PIZZ STGS 
+v:18 -> STG CRSNDO
+v:19 -> STGS 5THS 
+v:20 -> BELLS     (repeat)
+v:21 -> TUB BELLS  (repeat, good)
+v:22 -> RECORDERS 
+v:23 -> CHIMES    (Bells)
+v:24 -> VOICES    
+v:25 -> XYLOPHONE 
+v:26 -> COWBELL   (Percuss, repeat)
+v:27 -> WOOD BLOCK (Percuss)
+v:28 -> FLEXATONE 
+v:29 -> LOG DRUM  (Percuss, repeat)
+v:30 -> GLOKENSPL 
+v:31 -> VIBE      (Bells)
+PICCOLO   ,
+FLUTE   2 ,OBOE      ,CLARINET  ,BASSOON   ,PAN FLUTE ,LEAD BRASS,HORNS     ,SOLO TBONE,
+BRASS BC  ,BRASS 5THS,SYNTHBRASS,STRG QRT 1,STRG ENS 2,VIOLA SECN,STRGS LOW ,HIGH STRGS,
+PIZZ STGS ,STG CRSNDO,STGS 5THS ,BELLS     ,TUB BELLS ,RECORDERS ,CHIMES    ,VOICES    ,
+XYLOPHONE ,COWBELL   ,WOOD BLOCK,FLEXATONE ,LOG DRUM  ,GLOKENSPL ,VIBE      ,
+
+Bank 9
+v:0 -> CLAV-E.PNO
+v:1 -> PERC BRASS
+v:2 -> PRC SYNTH2 (Synth)
+v:3 -> HARPSI-STG
+v:4 -> CHIME-STRG
+v:5 -> HARP-FLUTE
+v:6 -> BELL-FLUTE
+v:7 -> STRG-CHIME (Synth)
+v:8 -> STRG-MARIM (String)
+v:9 -> STRG-PIZZT (String)
+v:10 -> ORCHESTRA 
+v:11 -> LEAD GUITR
+v:12 -> PIANO-BRS 
+v:13 -> BRS-CHIME 
+v:14 -> B.DRM-SNAR (Percuss, repeat)
+v:15 -> E.P-BRS BC (Bass)
+v:16 -> ORG-BRS BC (Organ)
+v:17 -> CLV-BRS BC
+v:18 -> WHISTLES  (wind)
+v:19 -> FILTER SWP
+v:20 -> FUNKY RISE
+v:21 -> WILD BOAR 
+v:22 -> SHIMMER   
+v:23 -> EVOLUTION 
+v:24 -> WATER GDN 
+v:25 -> WASP STING
+v:26 -> MULTI NOTE
+v:27 -> DESCENT   
+v:28 -> OCTAVE WAR
+v:29 -> ..GOTCHA..
+v:30 -> ST.HELENS 
+v:31 -> EXPLOSION 
+CLAV-E.PNO,
+PERC BRASS,PRC SYNTH2,HARPSI-STG,CHIME-STRG,HARP-FLUTE,BELL-FLUTE,STRG-CHIME,STRG-MARIM,
+STRG-PIZZT,ORCHESTRA ,LEAD GUITR,PIANO-BRS ,BRS-CHIME ,B.DRM-SNAR,E.P-BRS BC,ORG-BRS BC,
+CLV-BRS BC,WHISTLES  ,FILTER SWP,FUNKY RISE,WILD BOAR ,SHIMMER   ,EVOLUTION ,WATER GDN ,
+WASP STING,MULTI NOTE,DESCENT   ,OCTAVE WAR,..GOTCHA..,ST.HELENS ,EXPLOSION ,
+

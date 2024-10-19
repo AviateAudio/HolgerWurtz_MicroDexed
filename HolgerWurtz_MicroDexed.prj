@@ -9,7 +9,7 @@
   "effectDescription": "FM synthesis inspired by DX7 and similar synths.",
   "numInputs": 0,
   "numOutputs": 1,
-  "numControls": 11,
+  "numControls": 16,
   "effectFilename": "HolgerWurtz_MicroDexed_v0.0.2.efx",
   "libraryName": "HolgerWurtz_MicroDexed",
   "cppClass": "HolgerWurtz_MicroDexed::MicroDexed",
@@ -23,6 +23,7 @@
   "ram0Usage": "5.4",
   "ram1Usage": "0.8",
   "writableBuffers": 1,
+  "type": 1,
   "controls": [
     {
       "name": "Bypass",
@@ -51,10 +52,10 @@
       "iconPot": "gfx/BlackKnobFull.png",
       "iconPotHeight": 192,
       "position": [
-        152,
-        164
+        550,
+        125
       ],
-      "scalingRatio": 1.0,
+      "scalingRatio": 0.699999988079071,
       "supressValueLabel": 1,
       "userData": 0
     },
@@ -72,10 +73,10 @@
       "iconEncoder": "gfx/BlackKnobFull.png",
       "iconEncoderHeight": 192,
       "position": [
-        343,
-        164
+        725,
+        125
       ],
-      "scalingRatio": 1.0,
+      "scalingRatio": 0.699999988079071,
       "supressValueLabel": 1,
       "userData": 0
     },
@@ -86,7 +87,7 @@
       "config": [
         2,
         0.0,
-        3.0,
+        9.0,
         0.0,
         1.0
       ],
@@ -96,19 +97,19 @@
         "Piano",
         "Organ",
         "Strings",
-        "Extra",
         "Synth",
         "Brass",
         "Winds",
         "Bass",
         "Bells",
-        "Percuss"
+        "Percuss",
+        "Extra"
       ],
       "position": [
-        534,
-        164
+        900,
+        125
       ],
-      "scalingRatio": 1.0,
+      "scalingRatio": 0.699999988079071,
       "userData": 0
     },
     {
@@ -147,10 +148,10 @@
         ""
       ],
       "position": [
-        726,
-        164
+        129,
+        338
       ],
-      "scalingRatio": 1.0,
+      "scalingRatio": 0.699999988079071,
       "userData": 0
     },
     {
@@ -182,10 +183,10 @@
         "Pipes 3"
       ],
       "position": [
-        918,
-        164
+        261,
+        384
       ],
-      "scalingRatio": 1.0,
+      "scalingRatio": 0.699999988079071,
       "userData": 0
     },
     {
@@ -217,10 +218,221 @@
         "Strings 3"
       ],
       "position": [
-        1109,
-        164
+        393,
+        338
       ],
-      "scalingRatio": 1.0,
+      "scalingRatio": 0.699999988079071,
+      "userData": 0
+    },
+    {
+      "name": "Synth",
+      "shortName": "SYNTH",
+      "description": "Selects from different, distinctly synth sounds.",
+      "config": [
+        2,
+        0.0,
+        29.0,
+        0.0,
+        1.0
+      ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "Korg CX3",
+        "Synclavier",
+        "FATSO. RT.",
+        "JUPITER 8",
+        "Mini-Moog",
+        "St Pad 4c",
+        "HORNS 5A W",
+        "80 F",
+        "FUNK-RHYT.",
+        "KLA5 HS",
+        "SYNTH R.T.",
+        "LAAZCHRD1",
+        "BRASS 2",
+        "ORCHESTRA",
+        "SYN-LEAD 1",
+        "KOTO",
+        "CLAV 3",
+        "ACCORDION",
+        "SITAR",
+        "HARP 2",
+        "GONG 2",
+        "SYN-LEAD 3",
+        "SYN-CLAV 3",
+        "SYNBRASS 2",
+        "OCTAVE WAR",
+        "BRASS S H",
+        "LEAD BRASS",
+        "PRC SYNTH2",
+        "STRG-CHIME",
+        "Mooger Low"
+      ],
+      "position": [
+        525,
+        384
+      ],
+      "scalingRatio": 0.699999988079071,
+      "userData": 0
+    },
+    {
+      "name": "Brass",
+      "shortName": "BRASS",
+      "description": "Selects from different brass voices. ",
+      "config": [
+        2,
+        0.0,
+        5.0,
+        0.0,
+        1.0
+      ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "8RASS 3",
+        "B-R-ASS 1",
+        "BRS.STRS.",
+        "BRASS 5",
+        "BRASS 7",
+        "SYNTHBRASS"
+      ],
+      "position": [
+        657,
+        338
+      ],
+      "scalingRatio": 0.699999988079071,
+      "userData": 0
+    },
+    {
+      "name": "Winds",
+      "shortName": "WINDS",
+      "description": "Selects from different wind instrument voices.",
+      "config": [
+        2,
+        0.0,
+        12.0,
+        0.0,
+        1.0
+      ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "FLUTE 1",
+        "PIPES 1",
+        "OBOE",
+        "CLARINET",
+        "BASSOON",
+        "RECORDER",
+        "SYN-VOX",
+        "SYN-ORCH",
+        "PAN FLUTE",
+        "WHISTLES",
+        "CHOIR.",
+        "VOICE 1",
+        "VOICE 2"
+      ],
+      "position": [
+        789,
+        384
+      ],
+      "scalingRatio": 0.699999988079071,
+      "userData": 0
+    },
+    {
+      "name": "Bass",
+      "shortName": "BASS",
+      "description": "Selects from different bass voices.",
+      "config": [
+        2,
+        0.0,
+        8.0,
+        0.0,
+        1.0
+      ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "BASS 1",
+        "BASCHMIDT",
+        "BASS 2",
+        "BASS 4",
+        "SYN-LEAD 4",
+        "E.BASS 2",
+        "FRETLESS 2",
+        "PLUCK BASS",
+        "E.P-BRS BC"
+      ],
+      "position": [
+        921,
+        338
+      ],
+      "scalingRatio": 0.699999988079071,
+      "userData": 0
+    },
+    {
+      "name": "Bells",
+      "shortName": "BELLS",
+      "description": "Selects from different bells voices.",
+      "config": [
+        2,
+        0.0,
+        9.0,
+        0.0,
+        1.0
+      ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "VIBE 1",
+        "TUB BELLS",
+        "CELESTE",
+        "BELLS",
+        "BELL-FLUTE",
+        "T.BL-EXPA",
+        "CHIME-STRG",
+        "TUB ERUPT",
+        "CHIMES",
+        "VIBE"
+      ],
+      "position": [
+        1053,
+        384
+      ],
+      "scalingRatio": 0.699999988079071,
+      "userData": 0
+    },
+    {
+      "name": "Percussion",
+      "shortName": "PCUS",
+      "description": "Selects from different percussion voices.",
+      "config": [
+        2,
+        0.0,
+        10.0,
+        0.0,
+        1.0
+      ],
+      "iconEncoder": "gfx/BlackKnob32.png",
+      "iconEncoderHeight": 192,
+      "enums": [
+        "MARIMBA",
+        "STEEL DRUM",
+        "TIMPANI",
+        "GLOKENSPL",
+        "XYLOPHONE",
+        "COW BELL",
+        "BLOCK",
+        "LOG DRUM",
+        "B.DRM-SNAR",
+        "TRAIN",
+        "WOOD BLOCK"
+      ],
+      "position": [
+        1185,
+        338
+      ],
+      "scalingRatio": 0.699999988079071,
       "userData": 0
     },
     {
@@ -271,46 +483,33 @@
         "BakketDrum"
       ],
       "position": [
-        1300,
-        164
+        1317,
+        384
       ],
-      "scalingRatio": 1.0,
+      "scalingRatio": 0.699999988079071,
       "userData": 0
     },
     {
-      "name": "Compressor Enable",
-      "shortName": "COMP",
-      "description": "Controls the output ADSR copressor.",
+      "name": "Bank Select",
+      "shortName": "BSEL",
+      "description": "<description>",
       "config": [
-        0,
-        0.0,
+        2,
         1.0,
+        10.0,
         0.0,
         1.0
       ],
       "userData": 0
     },
     {
-      "name": "Compressor Pregain",
-      "shortName": "C-GAIN",
-      "description": "Sets the compressor pregain in dB.",
+      "name": "Voice Select",
+      "shortName": "VSEL",
+      "description": "<description>",
       "config": [
-        3,
-        0.0,
-        12.0,
-        0.0,
-        0.1000000014901161
-      ],
-      "userData": 0
-    },
-    {
-      "name": "Compressor Attack",
-      "shortName": "C-ATTK",
-      "description": "Sets the attack time in milliseconds for the compressor",
-      "config": [
-        3,
-        0.0,
-        500.0,
+        2,
+        1.0,
+        32.0,
         0.0,
         1.0
       ],
@@ -318,7 +517,7 @@
     }
   ],
   "projectFileVersion": "1.0.0",
-  "buildType": "1",
+  "buildType": "0",
   "companyLogo": "gfx/company.png",
   "pedalIcon": "gfx/MicroDexedIcon.png",
   "basePedal": "gfx/MicroDexedBase.png",
@@ -368,7 +567,13 @@
     "src/preset_piano.h",
     "src/preset_organ.h",
     "src/preset_strings.h",
-    "src/preset_finetales.h"
+    "src/preset_finetales.h",
+    "src/preset_synth.h",
+    "src/preset_brass.h",
+    "src/preset_bass.h",
+    "src/preset_bells.h",
+    "src/preset_percuss.h",
+    "src/preset_winds.h"
   ],
   "modules": null,
   "settings": {

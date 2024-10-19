@@ -1079,7 +1079,7 @@ uint8_t Dexed::getPitchbendStep(void)
 
 void Dexed::setModWheelRange(uint8_t range)
 {
-  range = constrain(range, 0, 12);
+  range = constrain(range, 0, 99);
 
   controllers.wheel.setRange(range);
 }

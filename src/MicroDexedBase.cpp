@@ -33,14 +33,19 @@ void MicroDexed::setParam(int paramIndex, float paramValue)
     case 0 : bypass( (paramValue - 0.000000) / (1.000000 - 0.000000) ); break;
     case 1 : volume( (paramValue - 0.000000) / (10.000000 - 0.000000) ); break;
     case 2 : transpose( (paramValue - 0.000000) / (35.000000 - 0.000000) ); break;
-    case 3 : category( (paramValue - 0.000000) / (3.000000 - 0.000000) ); break;
+    case 3 : category( (paramValue - 0.000000) / (9.000000 - 0.000000) ); break;
     case 4 : piano( (paramValue - 0.000000) / (18.000000 - 0.000000) ); break;
     case 5 : organ( (paramValue - 0.000000) / (12.000000 - 0.000000) ); break;
     case 6 : strings( (paramValue - 0.000000) / (12.000000 - 0.000000) ); break;
-    case 7 : finetales( (paramValue - 0.000000) / (31.000000 - 0.000000) ); break;
-    case 8 : compressorenable( (paramValue - 0.000000) / (1.000000 - 0.000000) ); break;
-    case 9 : compressorpregain( (paramValue - 0.000000) / (12.000000 - 0.000000) ); break;
-    case 10 : compressorattack( (paramValue - 0.000000) / (500.000000 - 0.000000) ); break;
+    case 7 : synth( (paramValue - 0.000000) / (29.000000 - 0.000000) ); break;
+    case 8 : brass( (paramValue - 0.000000) / (5.000000 - 0.000000) ); break;
+    case 9 : winds( (paramValue - 0.000000) / (12.000000 - 0.000000) ); break;
+    case 10 : bass( (paramValue - 0.000000) / (8.000000 - 0.000000) ); break;
+    case 11 : bells( (paramValue - 0.000000) / (9.000000 - 0.000000) ); break;
+    case 12 : percussion( (paramValue - 0.000000) / (10.000000 - 0.000000) ); break;
+    case 13 : finetales( (paramValue - 0.000000) / (31.000000 - 0.000000) ); break;
+    case 14 : bankselect( (paramValue - 1.000000) / (10.000000 - 1.000000) ); break;
+    case 15 : voiceselect( (paramValue - 1.000000) / (32.000000 - 1.000000) ); break;
     default : break;
     }
 }
@@ -51,14 +56,19 @@ float MicroDexed::getUserParamValue(int paramIndex, float normalizedParamValue)
     case 0 : return ( ((1.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // bypass
     case 1 : return ( ((10.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // volume
     case 2 : return ( ((35.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // transpose
-    case 3 : return ( ((3.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // category
+    case 3 : return ( ((9.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // category
     case 4 : return ( ((18.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // piano
     case 5 : return ( ((12.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // organ
     case 6 : return ( ((12.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // strings
-    case 7 : return ( ((31.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // finetales
-    case 8 : return ( ((1.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // compressorenable
-    case 9 : return ( ((12.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // compressorpregain
-    case 10 : return ( ((500.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // compressorattack
+    case 7 : return ( ((29.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // synth
+    case 8 : return ( ((5.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // brass
+    case 9 : return ( ((12.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // winds
+    case 10 : return ( ((8.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // bass
+    case 11 : return ( ((9.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // bells
+    case 12 : return ( ((10.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // percussion
+    case 13 : return ( ((31.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // finetales
+    case 14 : return ( ((10.000000 - 1.000000) * normalizedParamValue) + 1.000000 ); // bankselect
+    case 15 : return ( ((32.000000 - 1.000000) * normalizedParamValue) + 1.000000 ); // voiceselect
     default : return 0.0f;
     }
 }
@@ -90,9 +100,9 @@ bool MicroDexed::m_enableAndBypassCheck(unsigned numOutputs)
     }
 }
 
-const uint8_t rblk[256] = TEENSY_AUDIO_BLOCK;
+const uint8_t rblk[256] = { 0x0a, 0x12, 0x6a, 0x9e, 0x43, 0x54, 0x43, 0x8e, 0xbf, 0x0c, 0x06, 0x92, 0xde, 0x96, 0x53, 0xe6, 0xd6, 0x06, 0xc2, 0x6b, 0x3b, 0x30, 0x00, 0x5f, 0x3e, 0x48, 0x22, 0x61, 0x62, 0x71, 0x7c, 0xd2, 0x0b, 0x49, 0x08, 0x01, 0xdd, 0xf0, 0x1c, 0xd3, 0x81, 0x1a, 0xde, 0xcc, 0xed, 0x29, 0xa8, 0x7d, 0x7c, 0xa0, 0x66, 0x19, 0xa8, 0x41, 0x3c, 0x21, 0xb7, 0x4e, 0x97, 0x96, 0xf3, 0x5f, 0xfd, 0x0b, 0x50, 0x6c, 0x33, 0x79, 0x10, 0x89, 0x12, 0xe5, 0xe6, 0xba, 0x9f, 0xd5, 0x90, 0xe0, 0xc1, 0x7b, 0xc6, 0x17, 0x32, 0xcc, 0xe3, 0xc1, 0x36, 0x2c, 0x30, 0x16, 0x3f, 0xd1, 0x82, 0xd9, 0xcb, 0x44, 0x01, 0xf9, 0x05, 0xdc, 0x18, 0x36, 0x2e, 0x58, 0x6c, 0x9b, 0xf1, 0x0b, 0xf4, 0x02, 0x69, 0x12, 0xa3, 0x44, 0xa3, 0xd4, 0x96, 0x36, 0x27, 0xf6, 0x44, 0x56, 0x87, 0x56, 0x46, 0x00, 0x74, 0x36, 0x1a, 0xd4, 0x8a, 0xd2, 0x4b, 0xe1, 0x78, 0xa2, 0xd1, 0xdb, 0x81, 0x9e, 0xd1, 0x60, 0x68, 0x4b, 0x6e, 0x7c, 0xe8, 0xa9, 0x41, 0x66, 0x69, 0x61, 0xd9, 0x3f, 0x2b, 0xb0, 0xdd, 0x9f, 0xe6, 0xf7, 0x73, 0x71, 0xc9, 0xbe, 0x52, 0x41, 0x60, 0x23, 0x1c, 0xe1, 0xc1, 0xed, 0x41, 0x29, 0x39, 0xb0, 0xa5, 0x21, 0x59, 0xe7, 0x87, 0xc2, 0x48, 0x61, 0x01, 0x73, 0x11, 0xdf, 0x13, 0xf8, 0xd6, 0x86, 0x69, 0xa0, 0x45, 0xbb, 0xe1, 0xa5, 0xdf, 0xfe, 0x87, 0xa0, 0xeb, 0xc8, 0xca, 0x24, 0x78, 0x6f, 0x45, 0xd1, 0x56, 0xcd, 0x94, 0x9f, 0x2e, 0x95, 0x12, 0x3f, 0x74, 0x25, 0x37, 0x4b, 0xac, 0xa0, 0xeb, 0xf1, 0x5c, 0xcc, 0x96, 0x3b, 0xca, 0x1d, 0xdb, 0xb6, 0xe6, 0xa5, 0xda, 0x5e, 0x15, 0x20, 0x30, 0x6b, 0xed, 0xc4, 0x0a, 0x1b, 0x59, 0x1d, 0x5a, 0xce, 0x42, 0x92, 0x19, 0xee, 0x32, 0x04};
 const uint8_t* MicroDexed::getRblk() { return rblk; }
-static constexpr char PROGMEM MicroDexed_name[] = {0x48, 0x6f, 0x6c, 0x67, 0x65, 0x72, 0x20, 0x57, 0x75, 0x72, 0x74, 0x7a, 0x3a, 0x4d, 0x69, 0x63, 0x72, 0x6f, 0x44, 0x65, 0x78, 0x65, 0x64, 0x0};
+static constexpr char PROGMEM MicroDexed_name[] = {0x48, 0x6f, 0x6c, 0x67, 0x65, 0x72, 0x20, 0x57, 0x75, 0x72, 0x74, 0x7a, 0x3a, 0x44, 0x3a, 0x4d, 0x69, 0x63, 0x72, 0x6f, 0x44, 0x65, 0x78, 0x65, 0x64, 0x0};
 const char* MicroDexed::getName() { return MicroDexed_name; }
 
 }

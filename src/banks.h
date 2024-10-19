@@ -14,7 +14,7 @@ constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VO
 };
 #endif
 
-#if 0
+#if 1
 constexpr uint8_t progmem_bank[NUM_BANKS][NUM_VOICES_PER_BANK][NUM_VALUES_PER_VOICE] PROGMEM =
 {
 	{	// RitCh1.syx
