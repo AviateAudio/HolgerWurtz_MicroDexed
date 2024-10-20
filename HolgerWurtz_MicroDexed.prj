@@ -2,7 +2,7 @@
   "efxFileVersion": "1.6.0",
   "company": "Holger Wurtz",
   "effectName": "MicroDexed",
-  "effectVersion": "0.0.2",
+  "effectVersion": "1.0.0",
   "coreVersion": "1.6.0",
   "effectShortName": "DEX",
   "effectCategory": "Synth",
@@ -10,7 +10,7 @@
   "numInputs": 0,
   "numOutputs": 1,
   "numControls": 16,
-  "effectFilename": "HolgerWurtz_MicroDexed_v0.0.2.efx",
+  "effectFilename": "HolgerWurtz_MicroDexed_v1.0.0.efx",
   "libraryName": "HolgerWurtz_MicroDexed",
   "cppClass": "HolgerWurtz_MicroDexed::MicroDexed",
   "cppInstBase": "_HolgerWurtz_MicroDexed",
@@ -23,7 +23,6 @@
   "ram0Usage": "5.4",
   "ram1Usage": "0.8",
   "writableBuffers": 1,
-  "type": 1,
   "controls": [
     {
       "name": "Bypass",
@@ -517,7 +516,7 @@
     }
   ],
   "projectFileVersion": "1.0.0",
-  "buildType": "0",
+  "buildType": "1",
   "companyLogo": "gfx/company.png",
   "pedalIcon": "gfx/MicroDexedIcon.png",
   "basePedal": "gfx/MicroDexedBase.png",
