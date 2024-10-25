@@ -55,7 +55,7 @@ void MicroDexed::m_init()
     m_bassSel      = 0;
     m_bellsSel     = 0;
     m_percussSel   = 0;
-    m_finetalesSel = 0;
+    m_extraSel     = 0;
 
     m_bankselect = 0;
     m_voiceselect = 0;
@@ -307,9 +307,9 @@ void MicroDexed::m_updateVoice()
     case InstrumentCategory::PERCUSS :
         efxLogger.printf("MicroDexed::m_updateVoice(): PERCUSS set to voice %u, transpose %u\n", m_percussSel, m_transposeSel);
         m_dexed->decodeVoice(decoded_voice, (uint8_t*)percuss_bank[m_percussSel]);break;
-    case InstrumentCategory::FINETALES :
-        efxLogger.printf("MicroDexed::m_updateVoice(): FINETALES set to voice %u, transpose %u\n", m_finetalesSel, m_transposeSel);
-        m_dexed->decodeVoice(decoded_voice, (uint8_t*)finetales3_bank[m_finetalesSel]);break;
+    case InstrumentCategory::EXTRA :
+        efxLogger.printf("MicroDexed::m_updateVoice(): EXTRA set to voice %u, transpose %u\n", m_extraSel, m_transposeSel);
+        m_dexed->decodeVoice(decoded_voice, (uint8_t*)finetales3_bank[m_extraSel]);break;
     default : return;;
     }
 
@@ -381,19 +381,10 @@ void MicroDexed::percussion(float value)
 {
     m_setInstrument(InstrumentCategory::PERCUSS, Percussion_e, m_percussion, value, m_percussSel, NUM_PERCUSS_VOICES, "percussion");
 }
-void MicroDexed::finetales(float value)
+void MicroDexed::extra(float value)
 {
-    m_setInstrument(InstrumentCategory::FINETALES, FineTales_e, m_finetales, value, m_finetalesSel, NUM_FINETALES_VOICES, "finetales");
+    m_setInstrument(InstrumentCategory::EXTRA, Extra_e, m_extra, value, m_extraSel, NUM_FINETALES_VOICES, "extra");
 }
-// void MicroDexed::finetales(float value)
-// {
-//     m_finetalesSel = getUserParamValue(FineTales_e, value);
-//     m_finetalesSel = static_cast<unsigned>(m_finetalesSel);
-//     efxLogger.printf("MicroDexed::finetales select: %u\n", m_finetalesSel);
-//     if (m_finetalesSel < 0) { m_finetalesSel = 0; }
-//     if (m_finetalesSel >= NUM_FINETALES_VOICES) { m_finetalesSel = NUM_FINETALES_VOICES-1; }
-//     if (m_categorySel == InstrumentCategory::FINETALES) { m_updateVoiceRequest(); }
-// }
 
 ///////////////
 // COMPRESSOR

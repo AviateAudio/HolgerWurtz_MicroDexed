@@ -29,7 +29,7 @@ enum class InstrumentCategory : unsigned {
     BASS,
     BELLS,
     PERCUSS,
-    FINETALES
+    EXTRA
 };
 //!e - END_USER_EFFECT_TYPES
 
@@ -57,7 +57,7 @@ public:
         Bass_e = 10,
         Bells_e = 11,
         Percussion_e = 12,
-        FineTales_e = 13,
+        Extra_e = 13,
         BankSelect_e = 14,
         VoiceSelect_e = 15,
         NUM_CONTROLS
@@ -95,7 +95,7 @@ public:
     void bass(float value);
     void bells(float value);
     void percussion(float value);
-    void finetales(float value);
+    void extra(float value);
     void bankselect(float value);
     void voiceselect(float value);
 
@@ -118,7 +118,7 @@ private:
     float m_bass = 0.0f;
     float m_bells = 0.0f;
     float m_percussion = 0.0f;
-    float m_finetales = 0.0f;
+    float m_extra = 0.0f;
     float m_bankselect = 0.0f;
     float m_voiceselect = 0.0f;
 
@@ -151,7 +151,7 @@ private:
     unsigned m_bassSel      = 0;
     unsigned m_bellsSel     = 0;
     unsigned m_percussSel   = 0;
-    unsigned m_finetalesSel = 0;
+    unsigned m_extraSel = 0;
 
     static constexpr unsigned MAX_NOTES = 16;
     enum class VoiceUpdate : unsigned { IDLE, MUTING, ATTACKING };

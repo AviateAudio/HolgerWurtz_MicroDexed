@@ -43,7 +43,7 @@ void MicroDexed::setParam(int paramIndex, float paramValue)
     case 10 : bass( (paramValue - 0.000000) / (8.000000 - 0.000000) ); break;
     case 11 : bells( (paramValue - 0.000000) / (9.000000 - 0.000000) ); break;
     case 12 : percussion( (paramValue - 0.000000) / (10.000000 - 0.000000) ); break;
-    case 13 : finetales( (paramValue - 0.000000) / (31.000000 - 0.000000) ); break;
+    case 13 : extra( (paramValue - 0.000000) / (31.000000 - 0.000000) ); break;
     case 14 : bankselect( (paramValue - 1.000000) / (10.000000 - 1.000000) ); break;
     case 15 : voiceselect( (paramValue - 1.000000) / (32.000000 - 1.000000) ); break;
     default : break;
@@ -66,7 +66,7 @@ float MicroDexed::getUserParamValue(int paramIndex, float normalizedParamValue)
     case 10 : return ( ((8.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // bass
     case 11 : return ( ((9.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // bells
     case 12 : return ( ((10.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // percussion
-    case 13 : return ( ((31.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // finetales
+    case 13 : return ( ((31.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // extra
     case 14 : return ( ((10.000000 - 1.000000) * normalizedParamValue) + 1.000000 ); // bankselect
     case 15 : return ( ((32.000000 - 1.000000) * normalizedParamValue) + 1.000000 ); // voiceselect
     default : return 0.0f;

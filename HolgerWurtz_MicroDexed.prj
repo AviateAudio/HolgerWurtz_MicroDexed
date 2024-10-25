@@ -19,8 +19,8 @@
   "processMidi": true,
   "isDataPak": false,
   "audioStreamType": 1,
-  "cpuUsage": "1",
-  "ram0Usage": "5.4",
+  "cpuUsage": "9.9",
+  "ram0Usage": "14.9",
   "ram1Usage": "0.8",
   "writableBuffers": 1,
   "controls": [
@@ -435,9 +435,9 @@
       "userData": 0
     },
     {
-      "name": "FineTales",
-      "shortName": "TALES",
-      "description": "Select the FineTales voice.",
+      "name": "Extra",
+      "shortName": "EXTRA",
+      "description": "Select from the FineTails currated patch list.",
       "config": [
         2,
         0.0,
